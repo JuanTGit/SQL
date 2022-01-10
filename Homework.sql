@@ -56,13 +56,13 @@ where last_name like '%es';
 -- answer = 13
 
 -- Question 9
-select customer_id, count(*)
+select amount, count(*)
 from payment
 where customer_id between 380 and 430
-group by customer_id 
-having customer_id > 250;
+group by amount
+having count(*) > '250';
 
--- answer = See Chart
+-- answer = 3
 
 -- Question 10
 select rating, count(*)
