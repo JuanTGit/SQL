@@ -56,11 +56,12 @@ where last_name like '%es';
 -- answer = 13
 
 -- Question 9
-select amount, count(*)
+select amount, count(*) as rentals
 from payment
 where customer_id between 380 and 430
 group by amount
-having count(*) > '250';
+having count(*) > '250'
+order by rentals desc;
 
 -- answer = 3
 
